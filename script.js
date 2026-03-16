@@ -177,4 +177,9 @@ document.querySelectorAll('.team-section .tmcard').forEach(function(card,i){
   card.style.transitionDelay=((i%3)*90)+'ms';
 });
 
+document.querySelectorAll('#tab-events-cov .cov-card').forEach(function(card,i){
+  card.classList.add('reveal');
+  card.style.transitionDelay=(120 + i*70)+'ms';
+});
+
 document.querySelectorAll('.reveal').forEach(function(el){revealObs.observe(el);});
