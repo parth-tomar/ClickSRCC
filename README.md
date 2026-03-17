@@ -14,7 +14,7 @@ Created by Parth.
 
 ## License
 
-The code is released under the [MIT](https://github.com/ItsShaded/ClickSRCC/blob/main/LICENSE)
+The code is released under the [Mozilla Public License Version 2.0](https://github.com/ItsShaded/ClickSRCC/blob/main/LICENSE)
 license, while the rights to any art assets from 3rd parties belong to
 their respective owners.
 
