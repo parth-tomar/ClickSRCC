@@ -135,31 +135,37 @@ document.querySelectorAll('.film-card').forEach(function(card){
 
 // ── All Members Modal ──
 window.addEventListener('DOMContentLoaded', function() {
-  var openBtn = document.getElementById('viewAllMembersBtn');
-  var modal = document.getElementById('allMembersModal');
-  var closeBtn = document.getElementById('closeAllMembersModal');
-  if (openBtn && modal && closeBtn) {
+  function bindModal(openId, modalId, closeId) {
+    var openBtn = document.getElementById(openId);
+    var modal = document.getElementById(modalId);
+    var closeBtn = document.getElementById(closeId);
+    if (!openBtn || !modal || !closeBtn) return;
+
+    function closeModal() {
+      modal.style.display = 'none';
+      document.body.style.overflow = '';
+    }
+
     openBtn.addEventListener('click', function() {
       modal.style.display = 'flex';
       document.body.style.overflow = 'hidden';
     });
-    closeBtn.addEventListener('click', function() {
-      modal.style.display = 'none';
-      document.body.style.overflow = '';
-    });
+
+    closeBtn.addEventListener('click', closeModal);
+
     modal.addEventListener('click', function(e) {
-      if (e.target === modal) {
-        modal.style.display = 'none';
-        document.body.style.overflow = '';
-      }
+      if (e.target === modal) closeModal();
     });
+
     document.addEventListener('keydown', function(e) {
       if (modal.style.display === 'flex' && (e.key === 'Escape' || e.key === 'Esc')) {
-        modal.style.display = 'none';
-        document.body.style.overflow = '';
+        closeModal();
       }
     });
   }
+
+  bindModal('viewAllMembersBtn', 'allMembersModal', 'closeAllMembersModal');
+  bindModal('viewTeacherInChargeBtn', 'teacherInChargeModal', 'closeTeacherInChargeModal');
 });
 
 // ── Scroll reveal ──
