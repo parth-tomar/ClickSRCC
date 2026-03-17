@@ -345,6 +345,16 @@ section{position:relative;z-index:2}
   margin-bottom: 6px;
   color: var(--light);
 }
+.teacher-modal{max-width:820px}
+.teacher-modal-grid{display:grid;grid-template-columns:260px minmax(0,1fr);gap:28px;align-items:center}
+.teacher-modal-photo-wrap{display:flex;justify-content:center}
+.teacher-modal-photo{width:220px;height:220px;border-radius:24px;object-fit:cover;border:1px solid rgba(255,208,0,0.2);background:rgba(255,190,0,0.05);box-shadow:0 14px 34px rgba(0,0,0,0.26),0 0 24px rgba(255,208,0,0.08)}
+.teacher-modal-copy{min-width:0}
+.teacher-modal-label{font-size:10px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--y1);margin-bottom:12px}
+.teacher-modal-heading{text-align:left;margin-bottom:8px}
+.teacher-modal-degree{font-size:12px;color:var(--muted);margin-bottom:18px}
+.teacher-modal-desc{font-size:14px;line-height:1.8;color:var(--light)}
+.teacher-modal-desc+.teacher-modal-desc{margin-top:12px}
 @keyframes fadeInModal {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
@@ -367,6 +377,10 @@ section{position:relative;z-index:2}
   .modal-content li { text-align: center; }
   .modal-content::-webkit-scrollbar { display: none; }
   .members-columns { flex-direction: column; gap: 18px; }
+  .teacher-modal-grid{grid-template-columns:1fr;gap:20px}
+  .teacher-modal-photo{width:160px;height:160px;border-radius:20px}
+  .teacher-modal-heading{text-align:center}
+  .teacher-modal-degree,.teacher-modal-desc,.teacher-modal-label{text-align:center}
 }
 
 /* Photo cards */
@@ -430,6 +444,19 @@ section{position:relative;z-index:2}
 
 /* ══ TEAM ══ */
 .team-section{padding:10px 52px 80px}
+.team-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,360px);gap:24px;align-items:end;margin-bottom:48px}
+.team-head-copy{min-width:0}
+.teacher-in-charge-card{appearance:none;border:1px solid rgba(255,208,0,0.14);background:rgba(255,190,0,0.03);border-radius:var(--rlg);padding:20px 22px;color:var(--white);text-align:left;cursor:pointer;backdrop-filter:blur(22px) saturate(180%);-webkit-backdrop-filter:blur(22px) saturate(180%);box-shadow:inset 0 1px 0 rgba(255,208,0,0.06);transition:transform .25s,border-color .25s,box-shadow .25s,background .25s;min-height:132px}
+.teacher-in-charge-card:hover{transform:translateY(-4px);border-color:var(--gby);background:rgba(255,208,0,0.06);box-shadow:0 8px 36px rgba(255,185,0,0.12),0 0 28px rgba(255,208,0,0.07),0 0 0 1px rgba(255,208,0,0.16),inset 0 1px 0 rgba(255,255,255,0.08)}
+.teacher-in-charge-label{display:block;font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--y1);margin-bottom:14px}
+.teacher-in-charge-main{display:grid;grid-template-columns:64px minmax(0,1fr) 18px;gap:14px;align-items:center}
+.teacher-in-charge-photo{width:64px;height:64px;border-radius:50%;overflow:hidden;border:1.5px solid rgba(255,208,0,0.24);background:rgba(255,190,0,0.06);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.teacher-in-charge-photo img{width:100%;height:100%;object-fit:cover}
+.teacher-in-charge-copy{display:flex;flex-direction:column;min-width:0}
+.teacher-in-charge-name{font-size:22px;font-weight:700;line-height:1.1;color:var(--white)}
+.teacher-in-charge-meta{font-size:12px;color:var(--muted);margin-top:5px}
+.teacher-in-charge-arrow{color:var(--ultra);transition:transform .25s,color .25s}
+.teacher-in-charge-card:hover .teacher-in-charge-arrow{transform:translateX(4px);color:var(--y1)}
 /* Unified grid — ALL cards same size, 4 columns */
 .team-grid{
   display:grid;
@@ -526,6 +553,9 @@ footer{border-top:1px solid rgba(255,208,0,0.1);padding:6px 34px;display:flex;ju
 
 /* Desktop spacing: lift connect elements and add gap before footer */
 @media(min-width:961px){
+  .team-section{padding-bottom:48px}
+  .team-head{margin-bottom:36px}
+  .team-section .view-all-btn-wrap{margin-top:24px}
   .connect-grid{margin-top:34px}
   .connect-section{padding-bottom:34px}
   footer{margin-top:10px}
@@ -645,6 +675,16 @@ footer{border-top:1px solid rgba(255,208,0,0.1);padding:6px 34px;display:flex;ju
 [data-theme="light"] .modal-heading{color:var(--y1)}
 [data-theme="light"] .members-columns h3{color:var(--y1)}
 [data-theme="light"] .members-columns li{color:rgba(0,0,0,0.62)}
+[data-theme="light"] .teacher-modal-label{color:#9a6e00}
+[data-theme="light"] .teacher-modal-degree{color:rgba(0,0,0,0.48)}
+[data-theme="light"] .teacher-modal-desc{color:#1a1108}
+[data-theme="light"] .teacher-modal-photo{border-color:rgba(180,130,0,0.22);background:#ece7de;box-shadow:0 12px 30px rgba(0,0,0,0.12),0 0 0 1px rgba(255,208,0,0.18)}
+[data-theme="light"] .teacher-in-charge-card{background:#f5f5f5;color:#1a1108;border-color:rgba(0,0,0,0.08);box-shadow:0 8px 22px rgba(0,0,0,0.10),inset 0 1px 0 rgba(255,255,255,0.28);backdrop-filter:none;-webkit-backdrop-filter:none}
+[data-theme="light"] .teacher-in-charge-card:hover{border-color:rgba(255,208,0,0.55);background:#fbf7ef;box-shadow:0 12px 40px rgba(0,0,0,0.12),0 0 36px rgba(255,208,0,0.18),0 0 0 1px rgba(255,208,0,0.24),inset 0 1px 0 rgba(255,255,255,0.4)}
+[data-theme="light"] .teacher-in-charge-photo{border-color:rgba(180,130,0,0.22);background:#ece7de}
+[data-theme="light"] .teacher-in-charge-name{color:#1a1108}
+[data-theme="light"] .teacher-in-charge-meta{color:rgba(0,0,0,0.48)}
+[data-theme="light"] .teacher-in-charge-arrow{color:rgba(0,0,0,0.46)}
 [data-theme="light"] .modal-close{color:var(--y1)}
 [data-theme="light"] .modal-close:hover{color:#1a1108}
 
@@ -808,10 +848,17 @@ footer{border-top:1px solid rgba(255,208,0,0.1);padding:6px 34px;display:flex;ju
   .gallery-section,.events-section,.team-section{padding-left:20px;padding-right:20px}
   .connect-section{padding-left:20px;padding-right:0}
   .events-grid{grid-template-columns:1fr}
-  .team-cards{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:72px}
+  .team-head{grid-template-columns:1fr;gap:18px;margin-bottom:20px}
+  .team-cards{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
   .team-cards .team-row{display:contents}
   .team-section .team-row:first-of-type{margin-top:0}
   .team-cards .tmcard{max-width:none;width:auto;justify-self:stretch}
+  .team-cards .tm-mobile-sukrit{order:-6}
+  .team-cards .tm-mobile-diya{order:-5}
+  .team-cards .tm-mobile-bharati{order:-4}
+  .team-cards .tm-mobile-parth{order:-3}
+  .team-cards .tm-mobile-vansh{order:-2}
+  .team-cards .tm-mobile-satyam{order:-1}
   .team-cards .team-row-3>.tmcard:last-child{grid-column:auto;max-width:none;width:auto;justify-self:stretch}
   .team-row-2{display:grid;grid-template-columns:1fr 1fr}
   .team-row-2 .tmcard{flex:initial;max-width:none}
