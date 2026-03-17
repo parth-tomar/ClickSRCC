@@ -419,6 +419,8 @@ section{position:relative;z-index:2}
 .cov-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 .cov-card{border-radius:var(--rmd);overflow:hidden;background:rgba(255,190,0,0.03);border:1px solid rgba(255,208,0,0.1);backdrop-filter:blur(12px);transition:transform .3s,border-color .3s;cursor:none;display:block;color:inherit;text-decoration:none}
 .cov-card:hover{transform:translateY(-4px);border-color:var(--gby)}
+.cov-more-wrap{display:flex;justify-content:center;margin-top:14px}
+.cov-more-tab{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;cursor:pointer;padding:9px 20px}
 /* ── EVENTS COVERAGE THUMBNAIL SLOT ──
    Add image: <img src="YOUR_IMG.jpg" style="width:100%;aspect-ratio:16/10;object-fit:cover;display:block"> */
 .cov-thumb{width:100%;aspect-ratio:16/10;background:#000;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
