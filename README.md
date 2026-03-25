@@ -18,5 +18,10 @@ The code is released under the [Mozilla Public License Version 2.0](https://gith
 license, while the rights to any art assets from 3rd parties belong to
 their respective owners.
 
+## Preview
+ 
+https://www.clicksrcc.studio/
+
+
 <br>
 You cannot use this website however. Any copies will result in copyright and IP rights violation. 
